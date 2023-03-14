@@ -25,9 +25,9 @@ class _GameAppState extends State<GameApp> {
     }
 
     if (option == computer) {
-      setState(() => status = "Você ganhou! - Número sorteado foi: ${number}");
+      setState(() => status = "Você ganhou! - Número sorteado foi: $number");
     } else {
-      setState(() => status = "Você Perdeu! - Número sorteado foi: ${number}");
+      setState(() => status = "Você Perdeu! - Número sorteado foi: $number");
     }
   }
 
