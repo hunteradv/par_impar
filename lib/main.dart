@@ -5,33 +5,37 @@ void main() {
 }
 
 class GameApp extends StatelessWidget {
+  final style = TextStyle(color: Colors.white, fontSize: 32);
+
   @override
   build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          body: ListView(
-        scrollDirection: Axis.horizontal,
+          body: Column(
         children: [
-          Container(
+          Expanded(
+              child: Container(
             color: Colors.red,
-            width: 200,
-          ),
-          Container(
+            width: double.infinity,
+            margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
+            child: Center(
+              child: Text(
+                "Par",
+                style: style,
+              ),
+            ),
+          )),
+          Expanded(
+              child: Container(
             color: Colors.blue,
-            width: 200,
-          ),
-          Container(
-            color: Colors.green,
-            width: 200,
-          ),
-          Container(
-            color: Colors.yellow,
-            width: 200,
-          ),
-          Container(
-            color: Colors.black,
-            width: 200,
-          )
+            width: double.infinity,
+            margin: EdgeInsets.all(10),
+            child: Center(
+                child: Text(
+              "Ímpar",
+              style: style,
+            )),
+          ))
         ],
       )),
     );
